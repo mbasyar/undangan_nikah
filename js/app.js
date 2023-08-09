@@ -443,36 +443,36 @@ const ucapan = async () => {
         .catch((err) => alert(err));
 };
 
-const login = async () => {
-    document.getElementById('daftarucapan').innerHTML = renderLoading(pagination.getPer());
-    let body = document.querySelector('body');
+// const login = async () => {
+//     document.getElementById('daftarucapan').innerHTML = renderLoading(pagination.getPer());
+//     let body = document.querySelector('body');
 
-    await fetch(
-        getUrl('/api/login'),
-        parseRequest('POST', null, {
-            email: body.getAttribute('data-email'),
-            password: body.getAttribute('data-password')
-        }))
-        .then((res) => res.json())
-        .then((res) => {
-            if (res.code == 200) {
-                localStorage.removeItem('token');
-                localStorage.setItem('token', res.data.token);
-                ucapan();
-            }
+//     await fetch(
+//         getUrl('/api/login'),
+//         parseRequest('POST', null, {
+//             email: body.getAttribute('data-email'),
+//             password: body.getAttribute('data-password')
+//         }))
+//         .then((res) => res.json())
+//         .then((res) => {
+//             if (res.code == 200) {
+//                 localStorage.removeItem('token');
+//                 localStorage.setItem('token', res.data.token);
+//                 ucapan();
+//             }
 
-            if (res.error.length != 0) {
-                alert('Terdapat kesalahan, ' + res.error[0]);
-                window.location.reload();
-                return;
-            }
-        })
-        .catch(() => {
-            alert('Terdapat kesalahan, otomatis reload halaman');
-            window.location.reload();
-            return;
-        });
-};
+//             if (res.error.length != 0) {
+//                 alert('Terdapat kesalahan, ' + res.error[0]);
+//                 window.location.reload();
+//                 return;
+//             }
+//         })
+//         .catch(() => {
+//             alert('Terdapat kesalahan, otomatis reload halaman');
+//             window.location.reload();
+//             return;
+//         });
+// };
 
 const kirim = async () => {
     let nama = document.getElementById('formnama').value;
