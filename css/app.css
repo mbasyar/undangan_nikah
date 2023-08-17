@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Actor&display=swap');
+
+.text {
+    font-family: 'Actor', sans-serif;
+}
+
+
 html {
     scroll-behavior: smooth;
    
 }
+
 * {
-    color: black !important;
+    color: white !important;
 }
 
 body {
@@ -12,7 +20,7 @@ body {
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none; 
-    color: black !important;
+    color: white !important;
 }
 
 body::-webkit-scrollbar {
@@ -21,7 +29,7 @@ body::-webkit-scrollbar {
 
 .font-estetik {
     font-family: 'Sacramento', cursive !important;
-    color: #ff12b0 !important;
+    color: #BF9E50 !important;
     font-weight: bold;
 }
 
