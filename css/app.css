@@ -11,7 +11,7 @@ html {
 }
 
 * {
-    color: white !important;
+    color: black !important;
 }
 
 body {
@@ -20,7 +20,7 @@ body {
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none; 
-    color: white !important;
+    color: black !important;
 }
 
 body::-webkit-scrollbar {
